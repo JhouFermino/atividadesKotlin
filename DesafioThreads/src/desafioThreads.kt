@@ -12,7 +12,7 @@ fun main() {
         while (true) {
 
             semaforoAberto = true
-            println("\n🟢 Semáforo ABERTO")
+            println("\n Semáforo ABERTO")
 
             val tempoFinal = System.currentTimeMillis() + 5000
 
@@ -21,14 +21,14 @@ fun main() {
                 synchronized(fila) {
                     if (fila.isNotEmpty()) {
                         val carro = fila.removeFirst()
-                        println("🚗 Carro $carro passou no semáforo")
+                        println("Carro $carro passou no semáforo")
                     }
                 }
 
                 Thread.sleep(1000)
             }
             semaforoAberto = false
-            println("\n🔴 Semáforo FECHADO!")
+            println("\n Semáforo FECHADO!")
             Thread.sleep(10000)
         }
     }
@@ -42,7 +42,7 @@ fun main() {
 
             synchronized(fila) {
                 fila.addLast(idCarro)
-                println("🚙 Carro $idCarro chegou na fila")
+                println(" Carro $idCarro chegou na fila")
                 idCarro++
             }
         }
